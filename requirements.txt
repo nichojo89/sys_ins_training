@@ -1,0 +1,8 @@
+torch==2.2.1
+transformers==4.38.0
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+huggingface-hub==0.21.4
+datasets==2.18.0
+peft==0.8.2
+trl==0.8.1
+notebook==7.0.6
