@@ -56,6 +56,20 @@ Follow these steps to set up the project:
   - Model training and fine-tuning
   - Evaluation and inference
 
+## Evaluation
+
+After running the full pipeline (data generation → fine-tuning → inference), evaluate the fine-tuned model using:
+
+```bash
+jupyter notebook notebooks/evaluation.ipynb
+```
+
+The notebook guides manual comparison of base vs fine-tuned responses on:
+1. XML structure adherence (task routing, restrictions)
+2. Example consistency (tone, format, behavioral patterns)
+
+See `EVALUATION_RESULTS.md` for detailed findings and example comparisons.
+
 ## Key Features
 
 - **XML-based system prompts** for structured prompt management
