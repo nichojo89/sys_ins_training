@@ -173,7 +173,7 @@ for i, user_input in enumerate(test_inputs, 1):
     with torch.no_grad():
         outputs = model.generate(
             inputs,
-            max_length=200,
+            max_new_tokens=200,
             temperature=0.7,
             top_p=0.9,
             do_sample=True
