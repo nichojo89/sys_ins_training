@@ -141,7 +141,7 @@ print("=" * 80)
 print("STEP 1: BASELINE TEST - Testing Base Model (BEFORE fine-tuning)")
 print("=" * 80)
 
-model_name = "meta-llama/Llama-2-7b-chat-hf"
+model_name = "mistralai/Mistral-7B-Instruct-v0.1"
 print(f"\nLoading {model_name}...")
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -252,7 +252,8 @@ print("\nLoading fine-tuned model...")
 base_model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype=torch.float16,
-    device_map="auto"
+    device_map="auto",
+    trust_remote_code=True
 )
 
 fine_tuned_model = PeftModel.from_pretrained(base_model, "./models/fine_tuned")
